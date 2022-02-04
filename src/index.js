@@ -1,5 +1,4 @@
 import Phaser from 'phaser';
-import logoImg from './assets/logo.png';
 
 class MyGame extends Phaser.Scene
 {
@@ -10,7 +9,8 @@ class MyGame extends Phaser.Scene
 
     preload ()
     {
-        this.load.image('logo', logoImg);
+        let predir = 'src/assets/';
+        this.load.image('logo', predir + 'logo.png');
     }
       
     create ()
@@ -30,7 +30,7 @@ class MyGame extends Phaser.Scene
 
 const config = {
     type: Phaser.AUTO,
-    parent: 'phaser-example',
+    parent: 'GameZone',
     width: 800,
     height: 600,
     scene: MyGame
